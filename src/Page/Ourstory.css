@@ -1,0 +1,557 @@
+:root {
+  --bg-color: #e9e4d9;
+  --text-dark: #4E362E;
+  --text-muted: #555;
+  --accent-color: #3B1F1A;
+  --border-color: #cdc4b5;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    height: 1000vh;
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--text-dark);
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    font-style: oblique;
+}
+.full-container{
+  width: 90%;
+  display: flex;
+  margin: auto;
+  gap: 30px;
+
+}
+.left-container{
+  width: 30%;
+  margin-top:200px;
+}
+.left-container p{
+  font-size: 1rem;
+  color: #4E362E;
+  margin-bottom: 10px;
+}
+.left-container img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.Mid-container{
+  width: 40%;
+}
+.Mid-container img{
+  object-fit: cover;
+  border-radius: 10px;
+}
+.right-container{
+  width: 30%;
+  align-self: center;
+}
+.right-container p{
+  font-size: 1rem;
+  color: #4E362E;
+  margin-bottom: 10px;
+}
+.menu-btn{
+  margin-top: 30px;
+  padding: 14px 24px;
+  background-color: #3B1F1A;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .full-container {
+    display: flex; /* Ensuring flex is active */
+    flex-direction: column;
+    padding: 0;
+    gap: 10px; /* Removed the 5px gap to delete space between boxes */
+  }
+
+  .Mid-container, 
+  .right-container, 
+  .left-container {
+    width: 100%;
+    margin: 0; /* Ensures no outer margins are pushing boxes apart */
+    padding: 0; /* Adjust or remove if you want the content flush */
+    box-sizing: border-box;
+  }
+
+  .Mid-container {
+    order: 1;
+  }
+
+  .Mid-container img {
+    width: 100%;
+    display: block; /* Removes the small ghost gap at the bottom of images */
+    border-radius: 2px;
+  }
+
+  .right-container {
+    order: 2; /* Changed from 1 to avoid stacking conflicts */
+    padding: 20px 16px; /* Keep this if you want internal spacing, set to 0 to delete */
+  }
+
+  .left-container {
+    order: 3; /* Set to 3 to follow the others in sequence */
+  }
+
+  .menu-btn {
+    margin-top: 20px;
+  }
+
+  .Reservation p {
+    font-size: 1rem;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+.Reservation{
+  width: 100%;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.Reservation p{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4E362E;
+  margin: 0;
+}
+.reservation-btn{
+  padding: 14px 24px;
+  background-color: #3B1F1A;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* 1. Container Setup */
+.fan-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px; /* Adjust based on your image height */
+  width: 90%;
+  margin: 110px auto;
+  
+}
+
+/* 2. Base Card Styling */
+.fan-card {
+  position: absolute;
+  bottom: 0;
+  width: 230px; /* Width of the photos */
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform-origin: bottom center; /* Essential for the fan effect */
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.fan-card img {
+  width: 100%;
+  height: 350px; /* Fixed height for consistency */
+  object-fit: cover;
+  display: block;
+}
+
+
+.fan-left-outer.aos-animate {
+  opacity: 1;
+  transform: translate(-235px, 0) scale(1.04) rotate(-25deg) !important;
+  z-index: 1;
+}
+
+.fan-left-inner.aos-animate {
+  opacity: 1;
+  transform: translate(-120px, 0) scale(1.15)  rotate(-12deg) !important;
+  z-index: 2;
+}
+
+.fan-center.aos-animate{
+  opacity: 1;
+  transform: translate(0, -5px) scale(1.25) rotate(0deg) !important;
+  z-index: 3;
+}
+
+.fan-right-inner.aos-animate {
+  opacity: 1;
+  transform: translate(120px, 0)scale(1.15)  rotate(12deg) !important;
+  z-index: 2;
+}
+
+.fan-right-outer.aos-animate {
+  opacity: 1;
+  transform: translate(235px, 0) scale(1.04) rotate(25deg) !important;
+  z-index: 1;
+}
+
+/* Responsiveness for Fan Container */
+@media (max-width: 1024px) {
+  .fan-card {
+    width: 180px;
+  }
+  .fan-card img {
+    height: 280px;
+  }
+  .fan-container {
+    height: 250px;
+    margin: 80px auto;
+  }
+  .fan-left-outer.aos-animate { transform: translate(-180px, 0) scale(1.04) rotate(-25deg) !important; }
+  .fan-left-inner.aos-animate { transform: translate(-90px, 0) scale(1.15) rotate(-12deg) !important; }
+  .fan-right-inner.aos-animate { transform: translate(90px, 0) scale(1.15) rotate(12deg) !important; }
+  .fan-right-outer.aos-animate { transform: translate(180px, 0) scale(1.04) rotate(25deg) !important; }
+}
+
+@media (max-width: 768px) {
+  .fan-card {
+    width: 140px;
+  }
+  .fan-card img {
+    height: 210px;
+  }
+  .fan-container {
+    height: 200px;
+    margin: 50px auto;
+  }
+  .fan-left-outer.aos-animate { transform: translate(-80px, 0) scale(1.04) rotate(-25deg) !important; }
+  .fan-left-inner.aos-animate { transform: translate(-40px, 0) scale(1.15) rotate(-12deg) !important; }
+  .fan-right-inner.aos-animate { transform: translate(40px, 0) scale(1.15) rotate(12deg) !important; }
+  .fan-right-outer.aos-animate { transform: translate(80px, 0) scale(1.04) rotate(25deg) !important; }
+}
+
+@media (max-width: 480px) {
+  .fan-card {
+    width: 110px;
+  }
+  .fan-card img {
+    height: 170px;
+  }
+  .fan-container {
+    height: 150px;
+    margin: 40px auto;
+  }
+  .fan-left-outer.aos-animate { transform: translate(-90px, 0) scale(1.04) rotate(-25deg) !important; }
+  .fan-left-inner.aos-animate { transform: translate(-45px, 0) scale(1.15) rotate(-12deg) !important; }
+  .fan-right-inner.aos-animate { transform: translate(45px, 0) scale(1.15) rotate(12deg) !important; }
+  .fan-right-outer.aos-animate { transform: translate(90px, 0) scale(1.04) rotate(25deg) !important; }
+} 
+
+.bakery-section {
+  display: flex;
+  gap: 60px;
+  padding: 80px 0;
+  width: 90%;
+  margin: 50px auto;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.bakery-image {
+  flex: 1;
+}
+
+.bakery-image img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.bakery-content {
+  flex: 1;
+}
+
+/* Accordion Styling */
+.accordion-item {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  color: #333;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 24px;
+  opacity: 0;
+}
+
+.accordion-item.active {
+  border-color: var(--accent-color);
+  background-color: rgba(74, 55, 50, 0.03);
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 250px; 
+  padding: 0 24px 20px;
+  opacity: 1;
+}
+
+.accordion-item.active .accordion-header {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.accordion-header .icon {
+  transition: transform 0.3s ease;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.accordion-item.active .icon {
+  transform: rotate(180deg);
+}
+/* Bakery Section Responsiveness */
+@media (max-width: 900px) {
+  .bakery-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  
+  .bakery-image, .bakery-content {
+    width: 100%;
+  }
+
+  .bakery-image img {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bakery-section {
+    padding: 30px 15px;
+  }
+  
+  .accordion-header {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Button Styling */
+.menu-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  opacity: 0.9;
+}
+
+.oven-masters-section {
+  display: flex;/* Stack header on top of grid */
+  background-color: var(--bg-color);
+  padding: 100px 5%;
+  gap: 60px;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left Content */
+.content-header {
+  width: 100%;
+  text-align: center; /* Centered for column layout */
+}
+.content-header h1 {
+  font-size: 4rem;
+  margin: 0 0 25px 0;
+  color: var(--text-dark);
+  font-weight: 600;
+  text-align: center;
+}
+
+.content-header p {
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 700px; /* Slightly wider for centered text */
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+/* Grid for Cards */
+.masters-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow boxes to wrap into a 2x2 layout */
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px; /* Centering the 2x2 grid better */
+  justify-content: center;
+}
+
+.master-card {
+  position: relative;
+  flex: 0 0 calc(50% - 20px); /* Creates 2 columns (50% minus half the gap) */
+  height: 390px; /* Restored height for better look in 2x2 layout */
+  transition: transform 0.4s ease;
+}
+
+.master-card:hover {
+  transform: translateY(-10px);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 90%; 
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.master-card:hover .image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* The Name Tag */
+.name-tag {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  width: 79%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  z-index: 5;
+}
+
+.name-tag h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.name-tag span {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Responsive Master Section */
+@media (max-width: 1024px) {
+  .oven-masters-section {
+    gap: 40px;
+    padding: 80px 5%;
+  }
+  .content-header h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .oven-masters-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 20px;
+  }
+  .content-header {
+    margin-bottom: 10px;
+  }
+  .content-header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .content-header p {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .masters-grid {
+    width: 100%;
+    gap: 40px;
+  }
+  .master-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 550px) {
+  .masters-grid {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center;
+  }
+
+  .master-card {
+    flex: 0 0 calc(50% - 10px); 
+    height: auto; /* Let card grow with content */
+    margin-bottom: 20px;
+  }
+
+  .image-wrapper {
+    height: 300px; /* Fixed height for consistent image row */
+  }
+
+  .name-tag {
+    position: static; /* Move below image */
+    transform: none;
+    width: 100%;
+    background: transparent;
+    padding: 10px 0;
+    box-shadow: none;
+  }
+
+  .name-tag h3 {
+    font-size: 1.5rem; 
+    color: var(--text-dark);
+  }
+
+  .name-tag span {
+    color: var(--text-muted);
+  }
+}

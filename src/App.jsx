@@ -1,10 +1,13 @@
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
-import { Home, Service, ErrorPage } from "./Page";
+import { OurStory,Manu, ErrorPage } from "./Page";
 import RootLayout from "./Layouts/RootLayout";
 import AboutLayout from "./Layouts/AboutLayout";
 import UserLayout from "./Layouts/UserLayout";
-import User, { Userloader } from "./Page/user/User";
+import User from "./Page/user/User";
+import Bakery from "./Page/Bakery";
+import Blog from "./Page/blog";
+import UserDetail from "./Page/user/UserDetail";
 
 const router = createBrowserRouter([
   {
@@ -12,12 +15,12 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children:[
-      {
+      { 
         index: true,
-        element: <Home />,
+        element: <OurStory />,
       },
       {
-        path: "about",
+        path: "Menu",
         element: <AboutLayout />,
         children:[
           {
@@ -35,8 +38,12 @@ const router = createBrowserRouter([
         ]
       },
       {
-        path: "service",
-        element: <Service />,
+        path: "Bakery",
+        element: <Bakery />,
+      },
+      {
+        path: "Blog",
+        element: <Blog />,
       },
       {
         path : "user",
@@ -44,8 +51,11 @@ const router = createBrowserRouter([
         children:[
           {
            index: true,
-            element: <User />,
-            loader: Userloader,
+            element: <User />
+          },
+          {
+            path: ":id",
+            element : <UserDetail />,
           },
         ]
       },
