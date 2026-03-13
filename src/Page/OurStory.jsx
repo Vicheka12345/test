@@ -172,14 +172,14 @@ const OurStory = () => {
       <div className="container">
         <h2 className="main-heading">Latest Articles</h2>
         
-        <div className="articles-grid">
+        <div className="articles-grid ">
           {articles.map((article) => (
             <article key={article.id} className="article-card">
-              <div className="article-image-wrapper">
-                <img src={article.image} alt="Bakery creation" className="article-image" />
-                <div className="date-badge">{article.date}</div>
+              <div className="article-image-wrapper" data-aos="flip-left">
+                <img src={article.image} alt="Bakery creation"  className="article-image" />
+                <div className="date-badge" >{article.date}</div>
               </div>
-              <h3 className="article-title">{article.title}</h3>
+              <h3 className="article-title" data-aos="fade-up" data-aos-duration="3000">{article.title}</h3>
             </article>
           ))}
         </div>

@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+  --menu-yellow: #f8db1c;
+  --menu-bg: #1a1a1a;
+  --text-white: #ffffff;
+  --menu-gap: 50px;
+}
+
+
+.menu-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+/* Vertical Side Banner */
+.side-menu-banner {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  background-color: var(--menu-yellow);
+  width: 130px;
+  height: 825px;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 105;
+  border-radius: 15px 0 0 15px;
+}
+
+.side-menu-banner span {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  color: #f0f0f0;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+
+.bg-leaf{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.menu-container {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+}
+/* Header Styling */
+.menu-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.restaurant-name {
+  font-family: 'Dancing Script', cursive;
+  color: var(--text-white);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title-line {
+  flex: 1;
+  height: 2px;
+  background: var(--menu-yellow);
+  max-width: 100px;
+}
+
+.food-menu-title {
+  color: var(--menu-yellow);
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* Menu Section Layout */
+.menu-content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--menu-gap);
+}
+
+.menu-section {
+  display: flex;
+  height: 250px; /* Matching the relative height of the rows in image */
+  position: relative;
+}
+
+.yellow-side-bar {
+  width: 35px;
+  height: 80%;
+  background-color: var(--menu-yellow);
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 4px ;
+  margin-right: 30px;
+}
+
+.menu-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  border-radius: 15px;
+  height: 200px;
+  position: relative;
+}
+
+.menu-text-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 253, 253, 0.982);
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.category-title {
+  color: var(--menu-yellow);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.category-underline {
+  width: 100%;
+  height: 1px;
+  background: rgba(248, 219, 28, 0.4);
+  margin-top: 5px;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding-bottom: 3px;
+}
+
+.item-name {
+  font-weight: 500;
+  color: white;
+}
+
+.item-price {
+  font-weight: 800;
+}
+
+/* Image Card Styling */
+.menu-image-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.yellow-arc {
+  position: absolute;
+  width: 400px;
+  height: 228px;
+  border-radius:  90px 0 0 90px;
+  background: var(--menu-yellow);
+  z-index: 1;
+  left: 44px;
+}
+
+.image-circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  z-index: 2;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer Styling */
+.menu-footer {
+  margin-top: 60px;
+  text-align: left;
+}
+
+.footer-pill-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.footer-pill {
+  background:gray;
+  padding: 10px 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.footer-pill .icon {
+  font-size: 1.2rem;
+}
+
+
+.footer-line {
+  height: 2px;
+  background: var(--menu-yellow);
+  width: 100%;
+}
+
+/* Mobile Responsiveness */
+/* Mobile Responsiveness for Small Screens */
+@media (max-width: 768px) {
+  /* 1. Hide the side banner or it will overlap everything */
+  .side-menu-banner {
+    display: none;
+  }
+  .bg-leaf{
+    display: none;
+  }
+
+  /* 2. Scale down the header */
+  .food-menu-title {
+    font-size: 2.2rem;
+
+  }
+  
+  .restaurant-name {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+
+  .menu-header {
+    margin-bottom: 15px;
+  }
+
+  /* 3. Stack the rows vertically */
+
+
+  .menu-section {
+    flex-direction: column; /* Stack side bar and content */
+    height: auto;
+    align-items: center;
+  }
+
+  /* Hide the vertical yellow bar on mobile to save space */
+  .yellow-side-bar {
+    display: none;
+  }
+
+  /* 4. Content Layout Adjustments (Merging into one box) */
+  .menu-content {
+    display: flex;
+    flex-direction: column-reverse; /* Put Image on top of Text */
+    height: auto;
+    width: 100%;
+    border: 2px solid rgba(255, 253, 253, 0.982);
+    border-radius: 15px;
+    background: rgba(26, 26, 26, 0.9);
+    overflow: hidden;
+  }
+
+  .menu-text-card {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 20px;
+    background: transparent;
+  }
+
+  /* 5. Image & Arc Adjustments */
+  .menu-image-card {
+    margin-left: 0;
+    width: 100%;
+    height: 180px;
+    background: transparent;
+  }
+
+  .yellow-arc {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 0 0 50% 50%; /* Curved bottom to separate image area slightly */
+  }
+
+  .image-circle {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 0;
+    top: 1px;
+  }
+
+
+  /* 6. Footer Adjustments */
+  .footer-pill-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}

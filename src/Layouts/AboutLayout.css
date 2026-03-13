@@ -9,16 +9,37 @@
 
 .about-header {
   text-align: center;
- 
+  position: relative;
+  width: 100%;
+}
+
+.menu-title {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 100px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #4c2e2d;
+  
   position: relative;
 }
 
-.about-header h1 {
-  font-size: 3rem;
-  color: #ba652d;
-  margin-bottom: 20px;
+.title-small {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-bottom: -5px;
+  color: rgba(255, 255, 255, 0.9);
+}
 
+.title-large {
+  font-size: 5rem;
+  font-weight: 900;
   letter-spacing: 2px;
+  line-height: 1;
 }
 
 .about-nav {
@@ -29,14 +50,12 @@
 
 .about-nav .nav-link-sub {
   font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: white;
-  background-color: #ba652d;
-  border: 4px;
+  color: #4c2e2d;
   text-decoration: none;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
@@ -59,8 +78,16 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .about-header h1 {
-    font-size: 2.2rem;
+  .menu-title {
+    padding: 30px 60px;
+  }
+  
+  .title-small {
+    font-size: 1.1rem;
+  }
+  
+  .title-large {
+    font-size: 3.5rem;
   }
   
   .about-nav {

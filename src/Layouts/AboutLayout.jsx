@@ -5,7 +5,9 @@ function AboutLayout() {
   return (
     <div className="about-layout-container">
       <div className="about-header">
-        <h1>Our Menu</h1>
+        <h1 className="menu-title">
+          <span className="title-large">MENU</span>
+        </h1>
         <nav className="about-nav">
           <NavLink to="/Menu" end className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
             <span className="nav-icon"></span> Cake
@@ -13,8 +15,8 @@ function AboutLayout() {
           <NavLink to="Drink" className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
              <span className="nav-icon"></span> Drink
           </NavLink>
-          <NavLink to="Goal" className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
-            <span className="nav-icon"></span> Hot
+          <NavLink to="Breakfast" className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
+            <span className="nav-icon"></span> Breakfast
           </NavLink>
         </nav>
       </div>
@@ -23,6 +25,7 @@ function AboutLayout() {
       </div>
     </div>
   )
+  
 }
 
 export default AboutLayout;

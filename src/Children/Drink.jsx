@@ -7,7 +7,6 @@ import cafe2 from "./image/cafe2.jpg"
 import cafe3 from "./image/cafe3.png"
 import america from "./image/americano.webp"
 import matcha from "./image/matcha.webp"  
-import background from "./image/bg-cafe.png"  
 
 const Drink = () => {
   React.useEffect(() => {

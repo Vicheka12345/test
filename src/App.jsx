@@ -9,6 +9,7 @@ import Bakery from "./Page/Bakery";
 import Blog from "./Page/blog";
 import UserDetail from "./Page/user/UserDetail";
 import Drink from "./Children/Drink";
+import Breakfast from "./Children/Breakfast";
 
 const router = createBrowserRouter([
   {
@@ -33,8 +34,8 @@ const router = createBrowserRouter([
             element: <Drink />
           },
            {
-            path: "Goal",
-            element: <h4>Goal</h4>,
+            path: "Breakfast",
+            element: <Breakfast />,
           },
         ]
       },
