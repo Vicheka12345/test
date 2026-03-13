@@ -1,14 +1,21 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import "./AboutLayout.css";
 
 function AboutLayout() {
   return (
-    <div className="container" style={{ padding: '2rem 0' }}>
-      <div style={{ marginBottom: '2rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
-        <h1 style={{ marginBottom: '1rem' }}>About Us</h1>
-        <nav style={{ display: 'flex', gap: '1.5rem' }}>
-          <Link to="Vision" className="nav-link-sub">Vision</Link>
-          <Link to="Mision" className="nav-link-sub">Mission</Link>
-          <Link to="Goal" className="nav-link-sub">Goal</Link>
+    <div className="about-layout-container">
+      <div className="about-header">
+        <h1>Our Menu</h1>
+        <nav className="about-nav">
+          <NavLink to="/Menu" end className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
+            <span className="nav-icon"></span> Cake
+          </NavLink>
+          <NavLink to="Drink" className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
+             <span className="nav-icon"></span> Drink
+          </NavLink>
+          <NavLink to="Goal" className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
+            <span className="nav-icon"></span> Hot
+          </NavLink>
         </nav>
       </div>
       <div className="about-content">
@@ -19,3 +26,4 @@ function AboutLayout() {
 }
 
 export default AboutLayout;
+

@@ -8,6 +8,7 @@ import User from "./Page/user/User";
 import Bakery from "./Page/Bakery";
 import Blog from "./Page/blog";
 import UserDetail from "./Page/user/UserDetail";
+import Drink from "./Children/Drink";
 
 const router = createBrowserRouter([
   {
@@ -25,11 +26,11 @@ const router = createBrowserRouter([
         children:[
           {
             index: true,
-            element: <h4>Vision</h4>,
+            element: <Manu />,
           },
            {
-            path: "Mision",
-            element: <h4>Mision</h4>,
+            path: "Drink",
+            element: <Drink />
           },
            {
             path: "Goal",

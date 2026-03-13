@@ -11,6 +11,7 @@ function Layout() {
       <main className="pt-24 min-h-screen">
         <Outlet />
       </main>
+      <Footer />
     </div>
   )
 }

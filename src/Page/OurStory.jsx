@@ -9,7 +9,7 @@ import left2 from "../img/left2.avif"
 import right1 from "../img/right1.avif"
 import right2 from "../img/right2.avif"
 import cook from "../img/cook.avif"
-import pongtea from"../img/pongtea.png"
+import pongtea from "../img/pongtea.png"
 
 import './Ourstory.css';
 
@@ -52,6 +52,20 @@ const OurStory = () => {
       content: "From experimenting with modern techniques to exciting new recipes, we strive to make every bite feel fresh, unique, and unforgettable."
     }
   ];
+  const articles = [
+    {
+      id: 1,
+      image: left1,
+      date: "03.11.2026",
+      title: "Sweet traditions that continue to inspire our modern bakery creations"
+    },
+    {
+      id: 2,
+      image: right1,
+      date: "03.11.2026",
+      title: "From oven to table fresh treats crafted with love and care"
+    }
+  ];
 
   return (
     <div>
@@ -62,11 +76,11 @@ const OurStory = () => {
       <div className="full-container">
         <div className="left-container">
           <p data-aos="zoom-in-down" >We blend traditional baking methods with fresh, modern ideas to craft treats.</p>
-          <img data-aos="flip-left"data-aos-easing="ease-out-cubic" data-aos-duration="2000" src={image1} alt="Story 1" />
+          <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" src={image1} alt="Story 1" />
         </div>
 
         <div className="Mid-container">
-          <img data-aos="fade-down" data-aos-easing="linear"data-aos-duration="1500" src={image2} alt="Story 2" />
+          <img data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" src={image2} alt="Story 2" />
         </div>
 
         <div className="right-container">
@@ -135,7 +149,7 @@ const OurStory = () => {
         <div className="masters-grid">
           <div className="master-card" data-aos="fade-up" data-aos-delay="200">
             <div className="image-wrapper">
-              <img src={pongtea} alt="Theresa Webb" />
+              <img src={pongtea} alt="pongtea" />
             </div>
             <div className="name-tag">
               <h3>pongtea Sngaor</h3>
@@ -145,17 +159,33 @@ const OurStory = () => {
 
           <div className="master-card" data-aos="fade-up" data-aos-delay="400">
             <div className="image-wrapper">
-              <img src={left2} alt="Marvin McKinney" />
+              <img src={pongtea} alt="Pongtea" />
             </div>
             <div className="name-tag">
-              <h3>Marvin McKinney</h3>
+              <h3>Pongtea Sngaor</h3>
               <span>Cake Designer</span>
             </div>
           </div>
           </div>
       </section>
+            <section className="articles-section">
+      <div className="container">
+        <h2 className="main-heading">Latest Articles</h2>
+        
+        <div className="articles-grid">
+          {articles.map((article) => (
+            <article key={article.id} className="article-card">
+              <div className="article-image-wrapper">
+                <img src={article.image} alt="Bakery creation" className="article-image" />
+                <div className="date-badge">{article.date}</div>
+              </div>
+              <h3 className="article-title">{article.title}</h3>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
     </div>
   );
 };
-
 export default OurStory;
