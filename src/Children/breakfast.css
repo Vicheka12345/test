@@ -121,6 +121,7 @@
   background-color: var(--menu-yellow);
   margin-top: auto;
   margin-bottom: auto;
+  margin-top: 75px;
   border-radius: 4px ;
   margin-right: 30px;
 }
@@ -132,6 +133,7 @@
   border-radius: 15px;
   height: 200px;
   position: relative;
+  margin-top: 50px;
 }
 
 .menu-text-card {

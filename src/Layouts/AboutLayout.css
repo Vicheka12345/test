@@ -49,7 +49,7 @@
 }
 
 .about-nav .nav-link-sub {
-  font-family: 'Inter', sans-serif;
+  font-Family: "'SF Mono', monospace";
   font-size: 2rem;
   font-weight: 600;
   color: #4c2e2d;
