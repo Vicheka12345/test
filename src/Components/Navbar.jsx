@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/logo.avif'
+import logo from '../assets/logo1.png'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 const links = [
@@ -26,8 +26,11 @@ const links = [
   {
     label: "Reservation",
     path: "/Reservation"
+  },
+  {
+    label: "Contact",
+    path: "/Contact"
   }
- 
 ];  
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +45,7 @@ function Navbar() {
 
   return (
     <nav className="nav-bar" role="navigation" aria-label="Main navigation">
-      <img className="logo" src={logo} alt="reanmore logo" />
+      <img className="logo" src={logo} alt="Viz logo" />
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="nav-toggle"

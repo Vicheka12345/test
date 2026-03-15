@@ -33,7 +33,7 @@ const OurStory = () => {
   const images = [
     { id: 1, src: left2, class: 'fan-left-outer', anim: 'fade-up-right', delay: '400' },
     { id: 2, src: left1, class: 'fan-left-inner', anim: 'fade-up-right', delay: '200' },
-    { id: 3, src: top, class: 'fan-center',     anim: 'fade-up',       delay: '0'   },
+    { id: 3, src: top ,class: 'fan-center',     anim: 'fade-up',       delay: '0'   },
     { id: 4, src: right2, class: 'fan-right-inner', anim: 'fade-up-left',  delay: '200' },
     { id: 5, src: right1, class: 'fan-right-outer', anim: 'fade-up-left',  delay: '400' },
   ];

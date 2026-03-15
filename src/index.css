@@ -4,7 +4,7 @@
   --primary-color: #646cff;
   --primary-hover: #535bf2;
   --bg-color: #ffffff;
-  --text-color: #213547;
+  --text-color: #233D4C;
   --footer-bg: #1a1a1a;
   --footer-text: #ffffff;
   --nav-bg: rgba(255, 255, 255, 0.8);
@@ -27,7 +27,6 @@ body {
     sans-serif;
   background-color: var(--bg-color);
   line-height: 1.5;
-  height: 570vh;
 }
 
 .container {
@@ -47,8 +46,9 @@ body {
   justify-content: space-between;
   padding: 0.9rem 7rem;
   align-items: center;
-  background: #e7e1d5;
+  background-color: #233D4C;
   position: sticky;
+  top: 0;
   z-index: 100;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 .nav-link > a {
-  color: #4c2e2d;
+  color: white;
   font-size: 19px;
   padding: 0.5rem 0.75rem;
   display: inline-block;
@@ -76,7 +76,7 @@ body {
     background-color 0.2s ease;
 }
 .nav-link > a:hover {
-  color:red;
+  color: brown;
 }
 
 .nav-toggle {
@@ -84,7 +84,7 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  color: inherit;
+  color: white;
   cursor: pointer;
 }
 
@@ -112,14 +112,14 @@ body {
     top: 64px;
     left: 0;
     right: 0;
-    background: #e7e1d5;
+    background: #233D4C;
     padding: 0 1.25rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.28s ease;
   }
   .nav-lists.active {
-    max-height: 400px;
+    max-height: 470px;
     padding: 0.75rem 1.25rem 1.25rem;
   }
   .nav-link {
