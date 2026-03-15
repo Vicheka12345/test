@@ -1,16 +1,14 @@
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
-import { OurStory,Manu, ErrorPage, Contact } from "./Page";
+import { OurStory, Manu, ErrorPage, Contact, Reservation, Bakery, Blog, User } from "./Page";
 import RootLayout from "./Layouts/RootLayout";
 import AboutLayout from "./Layouts/AboutLayout";
 import UserLayout from "./Layouts/UserLayout";
-import User from "./Page/user/User";
-import Bakery from "./Page/Bakery";
-import Blog from "./Page/blog";
 import UserDetail from "./Page/user/UserDetail";
 import Drink from "./Children/Drink";
 import Breakfast from "./Children/Breakfast";
-import { Reservation } from "./Page/Reservation";
+
+
 
 const router = createBrowserRouter([
   {
