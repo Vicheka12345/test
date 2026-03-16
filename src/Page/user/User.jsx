@@ -32,8 +32,9 @@ const User = () => {
             data-aos-delay={index * 100}
           >
             <div className="user-avatar">
-              <UserIcon size={40} strokeWidth={1.5} />
+              <img src={user.image} alt={user.name} className="user-avatar-img" />
             </div>
+
             
             <div className="user-info">
               <h3>{user.name}</h3>

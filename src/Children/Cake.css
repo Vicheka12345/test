@@ -1,6 +1,4 @@
-body{
-  height: 400vh;
-}
+
 .menu-outer-wrapper {
   width: 100%;
   max-width: 1400px;
@@ -9,11 +7,6 @@ body{
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0,0,0,0.05);
 }
-
-.gallery-container {
-  padding: 50px 30px 40px 30px; 
-}
-
 .menu-header {
   text-align: center;
   margin-bottom: 30px;
@@ -93,21 +86,20 @@ body{
   .menu-header h1 {
     font-size: 1.8rem;
     flex-direction: column;
-    gap: 10px;
   }
   .menu-header h1 img {
     display: none;
   }
 }
 .menu-list-container {
-  padding: 20px 40px 60px 40px;
+  padding: 10px 40px 60px 40px;
   font-family: 'Inter', sans-serif;
 }
 
 .menu-items-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -118,7 +110,7 @@ body{
 
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;

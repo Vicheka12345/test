@@ -125,7 +125,7 @@ const Reservation = () => {
     </section>
     {/* Questions */}
     <section className="faq-container">
-      <h2 className="faq-title" data-aos="fade-down">Have Any Questions?</h2>
+      <h2 className="faq-title" >Have Any Questions?</h2>
       <div className="faq-grid">
         {faqs.map((faq, index) => (
           <div 
@@ -133,7 +133,6 @@ const Reservation = () => {
             className={`faq-card ${activeIndex === index ? 'active' : ''}`}
             onMouseEnter={() => setActiveIndex(index)}
             onMouseLeave={() => setActiveIndex(null)}
-            data-aos="fade-up"
             data-aos-delay={index * 100}
           >
             <div>

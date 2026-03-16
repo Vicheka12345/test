@@ -10,7 +10,7 @@
 }
 
 .main-title {
-  font-size: 3.5rem;
+  font-size: 3.9rem;
   color: #c26a38;
   font-weight: 500;
   margin-bottom: 40px;
@@ -117,10 +117,11 @@ letter-spacing: -2px;
 /* Responsive Logic */
 @media (max-width: 768px) {
   .main-title {
-    font-size: 2.2rem;  
+    font-size: 3.2rem;  
+    margin: 0;
   }
   .reservation-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
   .info-section h1 {
     font-size: 1.6rem;
@@ -128,7 +129,6 @@ letter-spacing: -2px;
 }
 .cards-container {
   background-color: #ebe5d9; /* Matching page background */
-  padding: 60px 20px;
   display: flex;
   justify-content: center;
 }
@@ -208,7 +208,6 @@ letter-spacing: -2px;
 /* FAQ Section Styling */
 .faq-container {
   background-color: #ebe5d9;
-  padding: 80px 20px;
   text-align: center;
   font-family: 'Inter', sans-serif;
 }
@@ -296,7 +295,6 @@ letter-spacing: -2px;
 @media (max-width: 1200px) {
   .faq-grid {
     flex-wrap: wrap;
-    gap: 20px;
   }
 }
 
@@ -305,11 +303,15 @@ letter-spacing: -2px;
     flex-direction: column;
     align-items: center;
   }
+  .faq-title{
+    font-size: 2rem;
+    margin-top: 10px;
+  }
   .faq-card {
     width: 100%;
     max-width: 400px;
     min-height: auto;
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
   .faq-card.active {
     min-height: auto;

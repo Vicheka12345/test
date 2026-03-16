@@ -92,7 +92,7 @@ const Bakery = () => {
     <section className="newsletter-section">
       <div className="newsletter-container">
         <h2 className="newsletter-title" data-aos="fade-up">
-          Join our bakers family & never miss out on sweet new arrivals
+          Join our bakers family & never miss <br />out on sweet new arrivals
         </h2>
         
         <form className="newsletter-form" data-aos="zoom-in" data-aos-delay="200" onSubmit={handleSubmit}>
@@ -110,7 +110,7 @@ const Bakery = () => {
             />
           </div>
           
-          <button type="submit" className="submits-btn">
+          <button type="submit" className="submitting-btn">
             Submit Now <span className="arrow">→</span>
           </button>
         </form>

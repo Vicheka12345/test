@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import './blog.css';
-import { articlesData } from '../data/articlesData.jsx';
+import React, { useState } from "react";
+import "./blog.css";
+import { articlesData } from "../data/articlesData.jsx";
 
 const Blog = () => {
   const [selectedArticleId, setSelectedArticleId] = useState(null);
@@ -20,23 +20,31 @@ const Blog = () => {
     return (
       <section className="article-detail-view">
         <button onClick={handleCloseDetail} className="back-button">
-          ← Back
+          <span className="arrow-icon">←</span> Back
         </button>
+
         <div className="detail-container">
           <div className="detail-img-wrap">
             <img src={article.image} alt={article.excerpt} />
           </div>
         </div>
-        
+
         {/* Main Content Section */}
         <div className="detail-content">
           <h1 className="detail-title">{content.title}</h1>
           <hr className="detail-divider" />
           <p className="full-text">{content.fullText}</p>
           <h2 className="detail-subheading">
-            {content.subheading.split(' ').map((word, i) => (
-              i === 0 ? <span key={i} className="underline-word">{word} </span> : word + (i === content.subheading.split(' ').length - 1 ? '' : ' ')
-            ))}
+            {content.subheading.split(" ").map((word, i) =>
+              i === 0 ? (
+                <span key={i} className="underline-word">
+                  {word}{" "}
+                </span>
+              ) : (
+                word +
+                (i === content.subheading.split(" ").length - 1 ? "" : " ")
+              ),
+            )}
           </h2>
           <ol className="detail-list">
             {content.detailList.map((item, i) => (
@@ -58,7 +66,7 @@ const Blog = () => {
           <hr className="detail-divider" />
           <p className="full-text">{content.secondaryText}</p>
           <h2 className="detail-subheading">{content.secondarySubheading}</h2>
-          <p style={{ fontSize: '1.1rem' }}>{content.secondaryDesc}</p>
+          <p style={{ fontSize: "1.1rem" }}>{content.secondaryDesc}</p>
           <ul className="detail-list">
             {content.secondaryList.map((item, i) => (
               <li key={i}>{item}</li>
@@ -97,11 +105,11 @@ const Blog = () => {
                 src={article.image}
                 alt={article.excerpt}
                 onClick={() => handleShowDetail(article.id)}
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: "pointer" }}
               />
             </div>
             <div className="article-content">
-              <span className='date'>{article.date}</span>
+              <span className="date">{article.date}</span>
               <h3>{article.title}</h3>
               <p className="article-excerpt">{article.excerpt}</p>
             </div>

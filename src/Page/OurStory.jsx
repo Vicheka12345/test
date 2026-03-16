@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import image1 from "../img/image-story1.avif";
@@ -14,6 +16,8 @@ import pongtea from "../img/pongtea.png"
 import './Ourstory.css';
 
 const OurStory = () => {
+  const navigate = useNavigate();
+
   // 1. Initialize AOS inside the main component
   useEffect(() => {
     AOS.init({
@@ -86,7 +90,14 @@ const OurStory = () => {
         <div className="right-container">
           <p data-aos="zoom-in-down">For us, baking isn't just about bread and cakes; it's about people.</p>
           <p data-aos="zoom-in-down">Our bakery is a place where neighbors gather, families meet, and every customer is part of our extended family.</p>
-          <button className="menu-btn" data-aos="zoom-in-down">View Our Menu &rarr;</button>
+          <button 
+            className="menu-btn" 
+            data-aos="zoom-in-down"
+            onClick={() => navigate('/Menu')}
+          >
+            View Our Menu &rarr;
+          </button>
+
         </div>
       </div>
 
@@ -96,7 +107,13 @@ const OurStory = () => {
           journey has always been guided by a love for baking and a desire to bring <br />
           people together.
         </p>
-        <button className="reservation-btn">Make Reservation &rarr;</button>
+        <button 
+          className="reservation-btn"
+          onClick={() => navigate('/Reservation')}
+        >
+          Make Reservation &rarr;
+        </button>
+
       </div>
 
       <div className="fan-container">
@@ -137,7 +154,14 @@ const OurStory = () => {
             ))}
           </div>
 
-          <a href="#" className="menu-btn">View Our Menu &rarr;</a>
+          <button 
+            className="menu-btn"
+            onClick={() => navigate('/Menu')}
+          >
+            View Our Menu &rarr;
+          </button>
+
+
         </div>
       </div>
       <section className="oven-masters-section">

@@ -35,8 +35,9 @@ function UserDetail() {
             <div className="profile-card" data-aos="zoom-in">
                 <aside className="profile-sidebar">
                     <div className="profile-avatar-large" data-aos="scale-up" data-aos-delay="200">
-                        <UserIcon size={80} strokeWidth={1} />
+                        <img src={data.image} alt={data.name} className="profile-img-large" />
                     </div>
+
                     <h2>{data.name}</h2>
                     <p className="username">@{data.username}</p>
                     
