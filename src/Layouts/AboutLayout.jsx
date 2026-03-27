@@ -6,13 +6,29 @@ function AboutLayout() {
     <div className="about-layout-container">
       <div className="about-header">
         <nav className="about-nav">
-          <NavLink to="/Menu" end className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
+          <NavLink
+            to="/Menu"
+            end
+            className={({ isActive }) =>
+              isActive ? "nav-link-sub active" : "nav-link-sub"
+            }
+          >
             <span className="nav-icon"></span> Cake
           </NavLink>
-          <NavLink to="Drink" className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
-             <span className="nav-icon"></span> Drink
+          <NavLink
+            to="Drink"
+            className={({ isActive }) =>
+              isActive ? "nav-link-sub active" : "nav-link-sub"
+            }
+          >
+            <span className="nav-icon"></span> Drink
           </NavLink>
-          <NavLink to="Breakfast" className={({ isActive }) => isActive ? "nav-link-sub active" : "nav-link-sub"}>
+          <NavLink
+            to="Breakfast"
+            className={({ isActive }) =>
+              isActive ? "nav-link-sub active" : "nav-link-sub"
+            }
+          >
             <span className="nav-icon"></span> Breakfast
           </NavLink>
         </nav>
@@ -21,9 +37,7 @@ function AboutLayout() {
         <Outlet />
       </div>
     </div>
-  )
-  
+  );
 }
 
 export default AboutLayout;
-

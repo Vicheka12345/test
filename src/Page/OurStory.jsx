@@ -22,8 +22,9 @@ const OurStory = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200, 
-      once: false,    
+      once: true,    
     });
+    AOS.refresh();
   }, []);
 
   // 2. State for Accordion
@@ -71,7 +72,7 @@ const OurStory = () => {
     }
   ];
   return (
-    <div className="font-sans overflow-x-hidden">
+    <div className="font-sans overflow-x-clip w-full">
       <article className="py-10 md:py-20 lg:py-28 text-center px-4">
         <h1 className="text-5xl md:text-7xl lg:text-8xl text-[#4E362E] font-medium italic leading-tight">
           Beyond's <br />The Viz
