@@ -107,7 +107,6 @@
 .menu-item-card {
   background: white;
   border-radius: 12px;
-
   display: flex;
   align-items: center;
   gap: 10px;
@@ -138,10 +137,10 @@
   flex-grow: 1;
 }
 
-.item-name {
+.item-name{
   margin: 0 0 5px 0;
   font-size: 1.25rem;
-  color: #1a1a1a;
+  color: black;
   font-weight: 500;
 }
 
