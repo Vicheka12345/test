@@ -6,7 +6,7 @@ import { Facebook, Instagram, Send } from "lucide-react";
 const Contact = () => {
   return (
     <div className="contact-container min-h-screen bg-[#e8e2d9] flex items-center justify-center p-5 md:p-10 font-sans">
-      <div className="contact-wrapper max-w-[1100px] w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 p-3 md:p-5 bg-white rounded-2xl shadow-xl">
+      <div className="contact-wrapper max-w-[1100px] w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 p-3 md:p-5">
         {/* Left Side: Image */}
         <div className="image-section w-full h-[350px] md:h-[600px] rounded-lg overflow-hidden">
           <img src={smile} alt="Smiling person" className="contact-image w-full h-full object-cover" />

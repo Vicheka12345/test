@@ -35,7 +35,7 @@ function Manu() {
   ];
   const items = [
     { id: 1, 
-      name: "Whole Wheat Multigrain",
+      name: "Whole Multigrain",
       desc: "Whole wheat flour, oats, seeds, honey", 
       price: "$6.40", 
       img: item2 
@@ -123,10 +123,10 @@ function Manu() {
                 <img className="w-full h-full object-cover rounded-lg" src={item.img} alt={item.name} />
               </div>
               <div className="item-details grow">
-                <h3 className="item-name text-lg md:text-xl font-medium text-black mb-1">{item.name}</h3>
-                <p className="item-desc text-sm md:text-base text-gray-500">{item.desc}</p>
+                <h3 className="item-names text-md md:text-xl font-bold text-black mb-1">{item.name}</h3>
+                <p className="item-desc text-sm md:text-base text-gray-600 font-medium">{item.desc}</p>
               </div>
-              <div className="item-price-tag shrink-0 px-4 py-1.5 border border-gray-100 rounded-full bg-white text-sm font-medium">
+              <div className="item-price-tag shrink-0 px-4 py-1.5 border border-gray-100 rounded-full bg-white text-sm font-bold text-gray-800">
                 <span>{item.price}</span>
               </div>
             </div>
